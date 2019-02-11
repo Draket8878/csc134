@@ -31,11 +31,28 @@ int main()
     total = total + grade;
 
     }
-    cout << "Total = " << total << endl;
-
     // find average by dividing total by number of tests
     average = total / numTests;
+    cout << "Total = " << total << endl;
+    cout << "The average is " << average << endl;
 
+    total = 0;
+    int currentTests = 1;
+
+    cout << "How many tests to average? ";
+    cin >> numTests;
+
+
+    while (currentTests <= numTests)
+    {
+    //within loop, ask for a test grade
+    cout << "Grade for test? ";
+    cin >> grade;
+
+    // add it to the total
+    total = total + grade;
+    currentTests++;
+    }
     cout << "The average is " << average << endl;
 
     return 0;
